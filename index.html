@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description"
+        content="Forma is an independent digital studio building thoughtful brands and better websites.">
+  <title>Forma — Thoughtfully digital</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <!-- Runs before body rendering to restore the theme without flashing. -->
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Shared SVG symbols: decorative instances are hidden from assistive tech. -->
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="arrow" viewBox="0 0 24 24">
+      <path d="M5 12h14M12 5l7 7-7 7"/>
+    </symbol>
+    <symbol id="sun" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="4"/>
+      <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>
+    </symbol>
+    <symbol id="moon" viewBox="0 0 24 24">
+      <path d="M20 14A8 8 0 0 1 10 4a8 8 0 1 0 10 10Z"/>
+    </symbol>
+    <symbol id="layers" viewBox="0 0 24 24">
+      <path d="m12 3 10 5-10 5L2 8Zm-10 9 10 5 10-5M2 16l10 5 10-5"/>
+    </symbol>
+    <symbol id="code" viewBox="0 0 24 24">
+      <path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 20"/>
+    </symbol>
+    <symbol id="spark" viewBox="0 0 24 24">
+      <path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5Z"/>
+    </symbol>
+    <symbol id="linkedin" viewBox="0 0 24 24">
+      <path d="M5 9v11M5 4v.01M10 20V9m0 5a5 5 0 0 1 10 0v6"/>
+    </symbol>
+    <symbol id="instagram" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <path d="M17.5 6.5h.01"/>
+    </symbol>
+  </svg>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Forma home">
+        <span class="brand-mark" aria-hidden="true">f</span> forma<span>.</span>
+      </a>
+
+      <nav class="nav" id="navigation" aria-label="Main navigation">
+        <a href="#services">What we do</a>
+        <a href="#about">The studio</a>
+        <a href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button" id="theme-toggle" type="button"
+                aria-label="Switch to dark mode" hidden>
+          <svg class="icon light-icon" aria-hidden="true"><use href="#moon"/></svg>
+          <svg class="icon dark-icon" aria-hidden="true"><use href="#sun"/></svg>
+        </button>
+        <button class="menu-toggle" id="menu-toggle" type="button"
+                aria-controls="navigation" aria-expanded="false" hidden>
+          Menu <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero: semantic content stays independent of the decorative artwork. -->
+    <section class="hero container" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> Independent digital studio</p>
+        <h1 id="hero-title">Good ideas.<br>Exceptional<br><em>experiences.</em></h1>
+        <p class="hero-description">
+          We turn ambitious ideas into thoughtful brands and websites.
+          Beautiful to look at. Even better to use.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#contact">
+            Build something great
+            <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>
+          </a>
+          <a class="text-link" href="#services">Explore our approach <span aria-hidden="true">↘</span></a>
+        </div>
+        <p class="hero-note">Small team. Close collaboration. Lasting impact.</p>
+      </div>
+
+      <div class="hero-art" id="hero-art" aria-hidden="true">
+        <div class="art-grid"></div>
+        <span class="art-label">IDEAS INTO IMPACT</span>
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="orbit orbit-three"></div>
+        <div class="art-center">f<span>.</span></div>
+        <div class="art-caption"><span>Designed with intent</span><span>01 / ∞</span></div>
+      </div>
+
+      <div class="hero-bottom">
+        <span>STRATEGY · DESIGN · DEVELOPMENT</span>
+        <a href="#services">A little further down <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <!-- Three equally weighted service cards. -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">01 / What we do</p>
+            <h2 id="services-title">Everything you need.<br>Nothing you don’t.</h2>
+          </div>
+          <p>From the first spark to the final detail, we bring clarity, craft,
+             and care to every step.</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="service-card">
+            <div class="card-top">
+              <svg class="icon service-icon" aria-hidden="true"><use href="#spark"/></svg>
+              <span>01</span>
+            </div>
+            <h3>Brand, with purpose.</h3>
+            <p>A clear point of view and a distinctive identity that feels
+               unmistakably you.</p>
+            <ul class="tags" aria-label="Brand services">
+              <li>Strategy</li><li>Identity</li><li>Art direction</li>
+            </ul>
+            <a class="card-link" href="#contact">Let’s shape your brand
+              <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <div class="card-top">
+              <svg class="icon service-icon" aria-hidden="true"><use href="#layers"/></svg>
+              <span>02</span>
+            </div>
+            <h3>Design, made human.</h3>
+            <p>Intuitive digital experiences that make complex things feel
+               refreshingly simple.</p>
+            <ul class="tags" aria-label="Design services">
+              <li>UX research</li><li>UI design</li><li>Prototyping</li>
+            </ul>
+            <a class="card-link" href="#contact">Let’s design your experience
+              <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <div class="card-top">
+              <svg class="icon service-icon" aria-hidden="true"><use href="#code"/></svg>
+              <span>03</span>
+            </div>
+            <h3>Built to go further.</h3>
+            <p>Fast, accessible websites with thoughtful interactions and
+               a foundation ready to grow.</p>
+            <ul class="tags" aria-label="Development services">
+              <li>Development</li><li>Accessibility</li><li>Performance</li>
+            </ul>
+            <a class="card-link" href="#contact">Let’s build your website
+              <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container about" id="about" aria-labelledby="about-title">
+      <div>
+        <p class="eyebrow">02 / The studio</p>
+        <h2 id="about-title">A small studio.<br>A bigger perspective.</h2>
+        <p class="about-story">
+          We believe the best work happens when curious people work closely
+          together. No layers of account managers. No disappearing acts.
+          Just a dedicated creative team, working alongside yours.
+        </p>
+        <a class="text-link" href="#contact">Meet your next creative partner
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <!-- Process statistics avoid unsupported client or revenue claims. -->
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-number" data-count="3">3</span>
+          <h3>Connected disciplines</h3>
+          <p>Strategy, design, and development.</p>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-count="1">1</span>
+          <h3>Dedicated team</h3>
+          <p>From your first hello to launch day.</p>
+        </div>
+        <div class="studio-note">
+          <span aria-hidden="true">↗</span>
+          <p>Good work starts with a good conversation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">03 / Your next chapter</p>
+          <h2 id="contact-title">Have something<br>in <em>mind?</em></h2>
+          <p>Tell us a little about your idea. We’ll take it from there.</p>
+          <div class="contact-note">
+            <span class="status-dot"></span>
+            Every great project starts with “what if.”
+          </div>
+        </div>
+
+        <!-- JS progressively enhances native validation and submission. -->
+        <form id="contact-form" method="post">
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Your name <span>(required)</span></label>
+              <input id="name" name="name" autocomplete="name"
+                     placeholder="Alex Morgan" required maxlength="100">
+            </div>
+            <div class="field">
+              <label for="email">Email address <span>(required)</span></label>
+              <input id="email" name="email" type="email" autocomplete="email"
+                     placeholder="alex@company.com" required maxlength="254">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="service">What can we help with?</label>
+            <select id="service" name="service">
+              <option value="Full project">A little bit of everything</option>
+              <option value="Brand strategy">Brand strategy & identity</option>
+              <option value="Web design">Website design</option>
+              <option value="Development">Website development</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Your idea <span>(required)</span></label>
+            <textarea id="message" name="message" rows="4" required
+                      minlength="10" maxlength="5000"
+                      placeholder="The big idea, the little details, or just a hello…"></textarea>
+          </div>
+
+          <p class="form-note">We’ll use your details only to respond to your inquiry.</p>
+          <button class="button button-primary" id="submit-button" type="submit" disabled>
+            <span id="submit-label">Send your inquiry</span>
+            <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>
+          </button>
+          <p id="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
+          <noscript>Please enable JavaScript to use this contact form.</noscript>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <div>
+      <a class="brand" href="#home">forma<span>.</span></a>
+      <p>Thoughtfully digital. Always human.</p>
+    </div>
+    <nav aria-label="Footer navigation">
+      <a href="#services">Services</a>
+      <a href="#about">Studio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <!-- Replace platform home URLs with your real studio profiles. -->
+    <div class="social-links">
+      <a class="icon-button" href="https://www.linkedin.com/"
+         aria-label="Visit LinkedIn">
+        <svg class="icon" aria-hidden="true"><use href="#linkedin"/></svg>
+      </a>
+      <a class="icon-button" href="https://www.instagram.com/"
+         aria-label="Visit Instagram">
+        <svg class="icon" aria-hidden="true"><use href="#instagram"/></svg>
+      </a>
+    </div>
+    <p class="copyright">© <span id="year">2026</span> Forma. All rights reserved.</p>
+  </footer>
+</body>
+</html>
