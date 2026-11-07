@@ -183,3 +183,16 @@ button, select { cursor: pointer; }
   .case-intro, .case-journeys { grid-template-columns: 1fr; }
   .case-footer { display: flex; flex-wrap: wrap; justify-content: space-between; }
 }
+
+/* English homepage positioning and Amal case study */
+.hero h1.hero-title-descriptive {
+  font-size: clamp(2.65rem, 5.15vw, 5.2rem);
+  line-height: .98;
+  letter-spacing: -.065em;
+  text-wrap: balance;
+}
+.contact-address { max-width: 100%; color: var(--muted); overflow-wrap: anywhere; }
+.case-decision { margin-top: 1.7rem; }
+@media (max-width: 760px) {
+  .hero h1.hero-title-descriptive { font-size: clamp(2.65rem, 8.5vw, 4.4rem); }
+}
