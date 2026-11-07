@@ -162,3 +162,24 @@ button, select { cursor: pointer; }
   html { scroll-behavior: auto; }
   .orbit { transition: none; }
 }
+
+/* Project details */
+.case-header { justify-content: space-between; }
+.case-page { padding-top: clamp(1.5rem, 4vw, 3rem); }
+.case-back { margin-bottom: clamp(1.5rem, 4vw, 3rem); }
+.case-intro { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: center; }
+.case-intro h1 { font-size: clamp(3.7rem, 10vw, 8rem); }
+.case-intro p:not(.eyebrow), .case-overview > p { max-width: 55ch; margin-top: .85rem; color: var(--muted); }
+.case-intro .case-lead { font-size: clamp(1.2rem, 2.5vw, 1.65rem); font-weight: 750; color: var(--ink); }
+.case-intro .button { margin-top: 1.3rem; }
+.case-figure { margin: 0; }
+.case-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: var(--radius); }
+.case-figure figcaption { margin-top: .6rem; color: var(--muted); font-size: .85rem; }
+.case-overview h2 { font-size: clamp(2.4rem, 5vw, 4rem); }
+.case-journeys { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-block: 1.5rem 2.25rem; }
+.case-role { max-width: 54rem; }
+.case-footer { border-top: 1px solid var(--line); }
+@media (max-width: 760px) {
+  .case-intro, .case-journeys { grid-template-columns: 1fr; }
+  .case-footer { display: flex; flex-wrap: wrap; justify-content: space-between; }
+}
