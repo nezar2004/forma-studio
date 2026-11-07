@@ -1,14 +1,5 @@
 "use strict";
 
-/*
- * Contact integration:
- * Provide a same-origin backend or a CORS-enabled form service.
- * It must accept POSTed FormData and return HTTP 2xx only after acceptance.
- * Validate inputs, rate-limit requests, and prevent spam on the server.
- * Never place secret API keys in this file.
- */
-const CONTACT_ENDPOINT = "";
-
 /* Restore theme early; storage can be unavailable in privacy modes. */
 const root = document.documentElement;
 const colorPreference = window.matchMedia("(prefers-color-scheme: dark)");
@@ -37,7 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const isDark = root.dataset.theme === "dark";
     themeButton.setAttribute(
       "aria-label",
-      `Switch to ${isDark ? "light" : "dark"} mode`
+      root.lang === "ar"
+        ? `التبديل إلى الوضع ${isDark ? "الفاتح" : "الداكن"}`
+        : `Switch to ${isDark ? "light" : "dark"} mode`
     );
   }
 
@@ -188,91 +181,5 @@ document.addEventListener("DOMContentLoaded", () => {
     counters.forEach(counter => observer.observe(counter));
   }
 
-  /* Contact: native validation, duplicate prevention, timeout, honest status. */
-  const form = document.querySelector("#contact-form");
-  const submitButton = document.querySelector("#submit-button");
-  const submitLabel = document.querySelector("#submit-label");
-  const status = document.querySelector("#form-status");
-  let submitting = false;
-
-  submitButton.disabled = false;
   document.querySelector("#year").textContent = String(new Date().getFullYear());
-
-  function setStatus(message, state) {
-    status.textContent = message;
-    status.dataset.state = state;
-  }
-
-  // Reject whitespace-only values while retaining native validation messages.
-  ["name", "message"].forEach(id => {
-    const input = document.getElementById(id);
-
-    function validateText() {
-      const minimum = id === "message" ? 10 : 1;
-      input.setCustomValidity(
-        input.value.trim().length < minimum
-          ? id === "message"
-            ? "Please enter at least 10 characters describing your idea."
-            : "Please enter your name."
-          : ""
-      );
-    }
-
-    input.addEventListener("input", validateText);
-    validateText();
-  });
-
-  form.addEventListener("submit", async event => {
-    event.preventDefault();
-    if (submitting || !form.reportValidity()) return;
-
-    if (!CONTACT_ENDPOINT.trim()) {
-      setStatus(
-        "This form is not connected yet. Your message has not been sent.",
-        "error"
-      );
-      return;
-    }
-
-    submitting = true;
-    submitButton.disabled = true;
-    submitLabel.textContent = "Sending…";
-    form.setAttribute("aria-busy", "true");
-    setStatus("Sending your inquiry…", "pending");
-
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 15000);
-
-    try {
-      const data = new FormData(form);
-      ["name", "email", "message"].forEach(key => {
-        data.set(key, String(data.get(key) || "").trim());
-      });
-
-      const response = await fetch(CONTACT_ENDPOINT, {
-        method: "POST",
-        body: data,
-        headers: { Accept: "application/json" },
-        signal: controller.signal
-      });
-
-      if (!response.ok) throw new Error("Submission rejected");
-
-      setStatus("Thank you. Your inquiry has been received.", "success");
-      form.reset();
-    } catch (error) {
-      setStatus(
-        error.name === "AbortError"
-          ? "Delivery confirmation timed out. Your message may have arrived; please check before retrying."
-          : "We couldn’t confirm delivery. Your details are still here so you can try again.",
-        "error"
-      );
-    } finally {
-      clearTimeout(timeout);
-      submitting = false;
-      submitButton.disabled = false;
-      submitLabel.textContent = "Send your inquiry";
-      form.removeAttribute("aria-busy");
-    }
-  });
 });

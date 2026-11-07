@@ -8,9 +8,9 @@
         content="Forma Studio builds brands, websites, and digital products. Explore work across healthcare, daily planning, and fashion.">
   <title>Forma Studio — Digital design & development</title>
 
-  <link rel="stylesheet" href="styles.css?v=portfolio-3">
+  <link rel="stylesheet" href="styles.css?v=portfolio-4">
   <!-- Runs before body rendering to restore the theme without flashing. -->
-  <script src="script.js"></script>
+  <script src="script.js?v=portfolio-4"></script>
 </head>
 
 <body>
@@ -37,14 +37,6 @@
     <symbol id="spark" viewBox="0 0 24 24">
       <path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5Z"/>
     </symbol>
-    <symbol id="linkedin" viewBox="0 0 24 24">
-      <path d="M5 9v11M5 4v.01M10 20V9m0 5a5 5 0 0 1 10 0v6"/>
-    </symbol>
-    <symbol id="instagram" viewBox="0 0 24 24">
-      <rect x="3" y="3" width="18" height="18" rx="5"/>
-      <circle cx="12" cy="12" r="4"/>
-      <path d="M17.5 6.5h.01"/>
-    </symbol>
   </svg>
 
   <header class="header">
@@ -61,6 +53,7 @@
       </nav>
 
       <div class="header-actions">
+        <a class="icon-button language-link" href="ar/" lang="ar" hreflang="ar" aria-label="العربية">AR</a>
         <button class="icon-button" id="theme-toggle" type="button"
                 aria-label="Switch to dark mode" hidden>
           <svg class="icon light-icon" aria-hidden="true"><use href="#moon"/></svg>
@@ -119,48 +112,48 @@
 
       <div class="work-grid">
           <article class="work-card">
-            <div class="work-cover work-cover-amal" aria-hidden="true">
-              <span class="work-index">01 / AMAL</span>
-              <div class="project-ui amal-ui">
-                <span class="project-logo" lang="ar" dir="rtl">أمل</span>
-                <span>Healthcare appointments</span>
-                <div class="amal-options"><span>Patient</span><span>Doctor</span></div>
-              </div>
+            <div class="work-cover">
+              <img src="images/amal.jpg" alt="Screenshot of Amal’s healthcare landing page" loading="lazy" decoding="async" width="880" height="605">
             </div>
             <p class="eyebrow">Digital health</p>
             <h3>Amal <span lang="ar" dir="rtl">أمل</span></h3>
             <p>A healthcare platform with separate patient and doctor paths for booking and managing appointments.</p>
+            <ul class="project-features">
+              <li>Separate patient and doctor entry points</li>
+              <li>Appointment booking and management</li>
+            </ul>
             <a class="card-link" href="https://nezar2004.github.io/A_project_for_the_Ministry_of_Health/">Visit Amal
               <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>
             </a>
           </article>
 
           <article class="work-card">
-            <div class="work-cover work-cover-wazen" aria-hidden="true">
-              <span class="work-index">02 / WAZEN</span>
-              <div class="project-ui wazen-ui">
-                <span class="project-logo" lang="ar" dir="rtl">وازن</span>
-                <span>Daily priorities</span>
-                <div class="wazen-bars"><i></i><i></i><i></i></div>
-              </div>
+            <div class="work-cover">
+              <img src="images/wazen.jpg" alt="Screenshot of the Wazen homepage" loading="lazy" decoding="async" width="880" height="605">
             </div>
             <p class="eyebrow">Daily planning</p>
             <h3>Wazen <span lang="ar" dir="rtl">وازن</span></h3>
             <p>A personal planner that brings study, fitness, nutrition, habits, and expenses together.</p>
+            <ul class="project-features">
+              <li>Daily planning for study, nutrition, and fitness</li>
+              <li>Habit and expense tracking</li>
+            </ul>
             <a class="card-link" href="https://nezar2004.github.io/nezar/">Visit Wazen
               <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>
             </a>
           </article>
 
           <article class="work-card">
-            <div class="work-cover work-cover-neravyn" aria-hidden="true">
-              <img src="../nova-productivity/neravyn-assets/fashion-hero.png" alt="" loading="lazy" decoding="async" width="1774" height="988">
-              <span class="work-index">03 / NERAVYN</span>
-              <span class="fashion-label">NERAVYN</span>
+            <div class="work-cover">
+              <img src="images/neravyn.jpg" alt="Screenshot of the NERAVYN fashion homepage" loading="lazy" decoding="async" width="880" height="605">
             </div>
             <p class="eyebrow">Fashion showcase</p>
             <h3>NERAVYN</h3>
             <p>A contemporary fashion showcase with 40 looks, editorial collections, and an interactive catalog.</p>
+            <ul class="project-features">
+              <li>40 looks with category, season, and price filters</li>
+              <li>Editorial collections and an interactive demo bag</li>
+            </ul>
             <a class="card-link" href="https://nezar2004.github.io/nova-productivity/">Visit NERAVYN
               <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>
             </a>
@@ -270,53 +263,20 @@
         <div>
           <p class="eyebrow">04 / Your next chapter</p>
           <h2 id="contact-title">Have something<br>in <em>mind?</em></h2>
-          <p>Tell us a little about your idea. We’ll take it from there.</p>
+          <p>Have a website or digital project in mind? Send us a message.</p>
           <div class="contact-note">
             <span class="status-dot"></span>
             Every great project starts with “what if.”
           </div>
         </div>
 
-        <!-- JS progressively enhances native validation and submission. -->
-        <form id="contact-form" method="post">
-          <div class="form-row">
-            <div class="field">
-              <label for="name">Your name <span>(required)</span></label>
-              <input id="name" name="name" autocomplete="name"
-                     placeholder="Alex Morgan" required maxlength="100">
-            </div>
-            <div class="field">
-              <label for="email">Email address <span>(required)</span></label>
-              <input id="email" name="email" type="email" autocomplete="email"
-                     placeholder="alex@company.com" required maxlength="254">
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="service">What can we help with?</label>
-            <select id="service" name="service">
-              <option value="Full project">A little bit of everything</option>
-              <option value="Brand strategy">Brand strategy & identity</option>
-              <option value="Web design">Website design</option>
-              <option value="Development">Website development</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="message">Your idea <span>(required)</span></label>
-            <textarea id="message" name="message" rows="4" required
-                      minlength="10" maxlength="5000"
-                      placeholder="The big idea, the little details, or just a hello…"></textarea>
-          </div>
-
-          <p class="form-note">We’ll use your details only to respond to your inquiry.</p>
-          <button class="button button-primary" id="submit-button" type="submit" disabled>
-            <span id="submit-label">Send your inquiry</span>
+        <div class="contact-options">
+          <h3>Get in touch</h3>
+          <a class="button button-primary" href="https://wa.me/962785308994">Message on WhatsApp
             <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>
-          </button>
-          <p id="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
-          <noscript>Please enable JavaScript to use this contact form.</noscript>
-        </form>
+          </a>
+          <a class="text-link email-link" href="mailto:nezarmoon2004@gmail.com"><bdi>nezarmoon2004@gmail.com</bdi></a>
+        </div>
       </div>
     </section>
   </main>
@@ -332,17 +292,6 @@
       <a href="#about">Studio</a>
       <a href="#contact">Contact</a>
     </nav>
-    <!-- Replace platform home URLs with your real studio profiles. -->
-    <div class="social-links">
-      <a class="icon-button" href="https://www.linkedin.com/"
-         aria-label="Visit LinkedIn">
-        <svg class="icon" aria-hidden="true"><use href="#linkedin"/></svg>
-      </a>
-      <a class="icon-button" href="https://www.instagram.com/"
-         aria-label="Visit Instagram">
-        <svg class="icon" aria-hidden="true"><use href="#instagram"/></svg>
-      </a>
-    </div>
     <p class="copyright">© <span id="year">2026</span> Forma. All rights reserved.</p>
   </footer>
 </body>

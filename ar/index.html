@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description"
+        content="فورما ستوديو يصمّم ويطوّر مواقع ومنتجات رقمية. تصفّح مشاريعنا في الصحة والتخطيط والأزياء.">
+  <title>فورما ستوديو | تصميم وتطوير رقمي</title>
+
+  <link rel="stylesheet" href="../styles.css?v=portfolio-4">
+  <!-- Runs before body rendering to restore the theme without flashing. -->
+  <script src="../script.js?v=portfolio-4"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">انتقل إلى المحتوى</a>
+
+  <!-- Shared SVG symbols: decorative instances are hidden from assistive tech. -->
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="arrow" viewBox="0 0 24 24">
+      <path d="M5 12h14M12 5l7 7-7 7"/>
+    </symbol>
+    <symbol id="sun" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="4"/>
+      <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>
+    </symbol>
+    <symbol id="moon" viewBox="0 0 24 24">
+      <path d="M20 14A8 8 0 0 1 10 4a8 8 0 1 0 10 10Z"/>
+    </symbol>
+    <symbol id="layers" viewBox="0 0 24 24">
+      <path d="m12 3 10 5-10 5L2 8Zm-10 9 10 5 10-5M2 16l10 5 10-5"/>
+    </symbol>
+    <symbol id="code" viewBox="0 0 24 24">
+      <path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 20"/>
+    </symbol>
+    <symbol id="spark" viewBox="0 0 24 24">
+      <path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5Z"/>
+    </symbol>
+  </svg>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="الصفحة الرئيسية لفورما">
+        <span class="brand-mark" aria-hidden="true">f</span> forma<span>.</span>
+      </a>
+
+      <nav class="nav" id="navigation" aria-label="التنقّل الرئيسي">
+        <a href="#work">الأعمال</a>
+        <a href="#services">الخدمات</a>
+        <a href="#about">الاستوديو</a>
+        <a href="#contact">خلّينا نحكي <span aria-hidden="true">↗</span></a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="icon-button language-link" href="../" lang="en" hreflang="en" aria-label="English">EN</a>
+        <button class="icon-button" id="theme-toggle" type="button"
+                aria-label="التبديل إلى الوضع الداكن" hidden>
+          <svg class="icon light-icon" aria-hidden="true"><use href="#moon"/></svg>
+          <svg class="icon dark-icon" aria-hidden="true"><use href="#sun"/></svg>
+        </button>
+        <button class="menu-toggle" id="menu-toggle" type="button"
+                aria-controls="navigation" aria-expanded="false" hidden>
+          القائمة <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero: semantic content stays independent of the decorative artwork. -->
+    <section class="hero container" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> استوديو رقمي مستقل</p>
+        <h1 id="hero-title">تصميم يصنع<br><em>فرقًا.</em></h1>
+        <p class="hero-description">
+          نصمّم ونطوّر مواقع ومنتجات رقمية تسهّل على الناس إنجاز ما يحتاجونه.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">
+            تصفّح أعمالنا
+            <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>
+          </a>
+          <a class="text-link" href="#contact">خلّينا نحكي <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="hero-art" id="hero-art" aria-hidden="true">
+        <div class="art-grid"></div>
+        <span class="art-label">IDEAS INTO IMPACT</span>
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="orbit orbit-three"></div>
+        <div class="art-center">f<span>.</span></div>
+        <div class="art-caption"><span>Designed with intent</span><span>01 / ∞</span></div>
+      </div>
+
+      <div class="hero-bottom">
+        <span>استراتيجية · تصميم · تطوير</span>
+        <a href="#work">انتقل إلى الأعمال <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <section class="section container" id="work" aria-labelledby="work-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">01 / معرض الأعمال</p>
+          <h2 id="work-title">أعمال مختارة</h2>
+        </div>
+        <p>ثلاثة مشاريع في الصحة والتخطيط اليومي والأزياء.</p>
+      </div>
+
+      <div class="work-grid">
+          <article class="work-card">
+            <div class="work-cover">
+              <img src="../images/amal.jpg" alt="لقطة من الصفحة الرئيسية لأمل" loading="lazy" decoding="async" width="880" height="605">
+            </div>
+            <p class="eyebrow">الصحة الرقمية</p>
+            <h3>أمل</h3>
+            <p>منصة صحية بمسارين للمرضى والأطباء لحجز المواعيد وإدارتها.</p>
+            <ul class="project-features">
+              <li>مساران للمرضى والأطباء</li>
+              <li>حجز المواعيد وإدارتها</li>
+            </ul>
+            <a class="card-link" href="https://nezar2004.github.io/A_project_for_the_Ministry_of_Health/">افتح أمل
+              <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>
+            </a>
+          </article>
+
+          <article class="work-card">
+            <div class="work-cover">
+              <img src="../images/wazen.jpg" alt="لقطة من الصفحة الرئيسية لوازن" loading="lazy" decoding="async" width="880" height="605">
+            </div>
+            <p class="eyebrow">التخطيط اليومي</p>
+            <h3>وازن</h3>
+            <p>أداة تخطيط تجمع الدراسة والرياضة والتغذية والعادات والمصاريف في مكان واحد.</p>
+            <ul class="project-features">
+              <li>تخطيط يومي للدراسة والتغذية والرياضة</li>
+              <li>متابعة العادات والمصاريف</li>
+            </ul>
+            <a class="card-link" href="https://nezar2004.github.io/nezar/">افتح وازن
+              <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>
+            </a>
+          </article>
+
+          <article class="work-card">
+            <div class="work-cover">
+              <img src="../images/neravyn.jpg" alt="لقطة من الصفحة الرئيسية لـ NERAVYN" loading="lazy" decoding="async" width="880" height="605">
+            </div>
+            <p class="eyebrow">معرض أزياء</p>
+            <h3>NERAVYN</h3>
+            <p>معرض أزياء معاصر يعرض ٤٠ إطلالة وكتالوجًا تفاعليًا.</p>
+            <ul class="project-features">
+              <li>٤٠ إطلالة مع فلاتر للفئة والموسم والسعر</li>
+              <li>مجموعات تحريرية وسلة تجريبية</li>
+            </ul>
+            <a class="card-link" href="https://nezar2004.github.io/nova-productivity/">افتح NERAVYN
+              <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>
+            </a>
+          </article>
+      </div>
+    </section>
+
+    <!-- Three equally weighted service cards. -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">02 / خدماتنا</p>
+            <h2 id="services-title">من الفكرة الأولى<br>إلى إطلاق الموقع.</h2>
+          </div>
+          <p>نشتغل معك على كل خطوة، من تحديد الفكرة إلى صقل التفاصيل.</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="service-card">
+            <div class="card-top">
+              <svg class="icon service-icon" aria-hidden="true"><use href="#spark"/></svg>
+              <span>01</span>
+            </div>
+            <h3>هوية تعبّر عنك.</h3>
+            <p>نصمّم هوية واضحة تعكس طبيعة مشروعك.</p>
+            <ul class="tags" aria-label="خدمات الهوية">
+              <li>استراتيجية</li><li>هوية</li><li>إخراج بصري</li>
+            </ul>
+            <a class="card-link" href="#contact">خلّينا نبني هويتك
+              <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <div class="card-top">
+              <svg class="icon service-icon" aria-hidden="true"><use href="#layers"/></svg>
+              <span>02</span>
+            </div>
+            <h3>تصميم سهل الاستخدام.</h3>
+            <p>نصمّم تجارب رقمية تسهّل المهام المعقّدة.</p>
+            <ul class="tags" aria-label="خدمات التصميم">
+              <li>بحث تجربة المستخدم</li><li>تصميم واجهات</li><li>نماذج أولية</li>
+            </ul>
+            <a class="card-link" href="#contact">خلّينا نصمّم تجربتك
+              <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <div class="card-top">
+              <svg class="icon service-icon" aria-hidden="true"><use href="#code"/></svg>
+              <span>03</span>
+            </div>
+            <h3>مواقع جاهزة للتطوّر.</h3>
+            <p>نطوّر مواقع سريعة وسهلة الوصول وقابلة للتوسّع.</p>
+            <ul class="tags" aria-label="خدمات التطوير">
+              <li>تطوير</li><li>سهولة الوصول</li><li>أداء</li>
+            </ul>
+            <a class="card-link" href="#contact">خلّينا نبني موقعك
+              <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container about" id="about" aria-labelledby="about-title">
+      <div>
+        <p class="eyebrow">03 / الاستوديو</p>
+        <h2 id="about-title">استوديو صغير.<br>ونظرة أوسع.</h2>
+        <p class="about-story">
+          بنشتغل معك مباشرة من أول قرار تصميم لحد الإطلاق.
+        </p>
+        <a class="text-link" href="#contact">تعرّف علينا أكثر
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <!-- Process statistics avoid unsupported client or revenue claims. -->
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-number" data-count="3">3</span>
+          <h3>مجالات متكاملة</h3>
+          <p>استراتيجية وتصميم وتطوير.</p>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-count="1">1</span>
+          <h3>فريق واحد</h3>
+          <p>من أول تواصل ليوم الإطلاق.</p>
+        </div>
+        <div class="studio-note">
+          <span aria-hidden="true">↗</span>
+          <p>الشغل الجيد ببلّش بحوار واضح.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">04 / التواصل</p>
+          <h2 id="contact-title">عندك فكرة<br><em>ببالك؟</em></h2>
+          <p>إذا عندك فكرة لموقع أو مشروع رقمي، ابعتلنا رسالة.</p>
+          <div class="contact-note">
+            <span class="status-dot"></span>
+            احكيلنا عن فكرتك.
+          </div>
+        </div>
+
+        <div class="contact-options">
+          <h3>تواصل معنا</h3>
+          <a class="button button-primary" href="https://wa.me/962785308994">راسلنا على واتساب
+            <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>
+          </a>
+          <a class="text-link email-link" href="mailto:nezarmoon2004@gmail.com"><bdi>nezarmoon2004@gmail.com</bdi></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <div>
+      <a class="brand" href="#home">forma<span>.</span></a>
+      <p>تصميم رقمي يراعي الناس.</p>
+    </div>
+    <nav aria-label="روابط التذييل">
+      <a href="#services">الخدمات</a>
+      <a href="#work">الأعمال</a>
+      <a href="#about">الاستوديو</a>
+      <a href="#contact">تواصل</a>
+    </nav>
+    <p class="copyright">© <span id="year">2026</span> فورما. جميع الحقوق محفوظة.</p>
+  </footer>
+</body>
+</html>
