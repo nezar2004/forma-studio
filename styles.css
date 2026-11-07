@@ -158,6 +158,22 @@ h1 { font-size: clamp(3.25rem, 6.8vw, 6rem); font-weight: 550; line-height: 1.02
 .studio-note { grid-column: 1 / -1; display: flex; align-items: center; gap: var(--space-5); background: var(--surface-soft); padding: var(--space-5); border-radius: var(--radius-sm); font-size: .85rem; }
 .studio-note > span { font-size: 2rem; color: var(--accent); }
 
+/* Portfolio illustrations and card spacing. */
+.work-cover {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 2 / 1;
+  margin-bottom: var(--space-5);
+  border-radius: var(--radius-sm);
+}
+.work-cover .icon { width: 3rem; height: 3rem; }
+.work-cover-amal { background: #dcece7; color: #18534a; }
+.work-cover-wazen { background: #e9e4f5; color: #504175; }
+.work-cover-neravyn { background: #ece1d6; color: #5b392c; }
+.work-card > .eyebrow { margin-top: 0; margin-bottom: var(--space-2); }
+.work-card h3 span { color: var(--muted); }
+.work-card > p:not(.eyebrow) { margin-bottom: var(--space-5); }
+
 /* Form fields use real labels, visible focus, and an explicit status region. */
 .contact-section { background: var(--surface-soft); }
 .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: var(--space-9); }
@@ -202,7 +218,7 @@ input:user-invalid, textarea:user-invalid { border-color: var(--error); }
   .section { padding-block: var(--space-8); }
   .header-inner { flex-wrap: wrap; gap: var(--space-3); padding-block: var(--space-3); }
   .header-actions { margin-left: auto; }
-  .nav { order: 3; width: 100%; justify-content: space-between; gap: var(--space-3); }
+  .nav { order: 3; width: 100%; justify-content: space-between; flex-wrap: wrap; gap: 0 var(--space-3); }
   .js .menu-toggle { display: inline-flex; }
   .js .nav { display: none; }
   .js .nav.is-open { display: flex; }
