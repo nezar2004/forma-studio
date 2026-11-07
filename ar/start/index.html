@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="شارك التفاصيل الأساسية حتى أفهم فكرتك قبل ما نناقش نطاق الشغل والخطوات الجاية.">
+  <title>ابدأ مشروعك — Forma Studio</title>
+  <link rel="canonical" href="https://nezar2004.github.io/forma-studio/ar/start/">
+  <link rel="alternate" hreflang="en" href="https://nezar2004.github.io/forma-studio/start/">
+  <link rel="alternate" hreflang="ar" href="https://nezar2004.github.io/forma-studio/ar/start/">
+  <link rel="alternate" hreflang="x-default" href="https://nezar2004.github.io/forma-studio/start/">
+  <link rel="icon" type="image/svg+xml" href="../../images/forma-icon.svg">
+  <script>
+    let theme;
+    try { theme = localStorage.getItem("forma-theme"); } catch {}
+    document.documentElement.dataset.theme = theme === "dark" || theme === "light"
+      ? theme : matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  </script>
+  <link rel="stylesheet" href="../../styles.css?v=request-1">
+  <script src="../../request.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">انتقل إلى المحتوى</a>
+  <header class="header">
+    <div class="container header-inner case-header">
+      <a class="brand" href="../" aria-label="الصفحة الرئيسية لفورما"><img class="brand-light" src="../../images/forma-wordmark.svg" alt="" width="145" height="38"><img class="brand-dark" src="../../images/forma-wordmark-dark.svg" alt="" width="145" height="38"></a>
+      <a class="icon-button language-link" href="../../start/" lang="en" aria-label="English">EN</a>
+    </div>
+  </header>
+  <main class="container request-page" id="main" tabindex="-1">
+    <a class="text-link" href="../">الرجوع إلى فورما</a>
+    <div class="request-layout">
+      <div class="request-intro">
+        <p class="eyebrow"><span class="status-dot"></span>طلب مشروع</p>
+        <h1>احكيلي شو بدك نبني.</h1>
+        <p class="request-lead">شارك التفاصيل الأساسية حتى أفهم فكرتك قبل ما نناقش نطاق الشغل والخطوات الجاية.</p>
+        <aside class="request-next" aria-labelledby="next-title">
+          <h2 id="next-title">شو بصير بعد الإرسال؟</h2>
+          <ol><li>براجع أهدافك ومتطلباتك.</li><li>بنوضّح نطاق الشغل والموعد والتسليمات.</li><li>بتستلم تقدير للتكلفة قبل ما نبلّش.</li></ol>
+          <p>بتفضّل تكتبلي مباشرة؟ <a class="text-link" href="mailto:nezarmoon2004@gmail.com">راسل Forma بالبريد</a></p>
+        </aside>
+      </div>
+      <section class="request-card" aria-labelledby="brief-title">
+        <h2 id="brief-title">تفاصيل المشروع</h2>
+        <p class="request-hint">الاسم والبريد ونوع المشروع وتفاصيله مطلوبة.</p>
+        <form id="project-request" method="post" data-sending="جاري إرسال الطلب…" data-success="وصل طلبك. رح أرد على البريد اللي أدخلته." data-error="ما قدرنا نؤكّد وصول الطلب. تفاصيلك لسه موجودة. جرّب مرة ثانية أو راسل Forma بالبريد." data-unavailable="استقبال الطلبات من الموقع قيد التجهيز. بتقدر تراسل Forma بالبريد حاليًا.">
+          <input type="hidden" name="language" value="ar">
+          <input type="hidden" name="source" value="Forma Studio">
+          <div class="request-fields">
+            <label>اسمك<input name="name" autocomplete="name" required maxlength="100"></label>
+            <label>البريد الإلكتروني<input type="email" name="email" autocomplete="email" required maxlength="254"></label>
+            <label>نوع المشروع<select name="project_type" required><option value="" disabled selected>اختار نوع المشروع</option><option value="Business website">موقع لشركة أو مشروع</option><option value="Web app or dashboard">واجهة تطبيق أو لوحة تحكم</option><option value="Interactive catalog">كتالوج تفاعلي</option><option value="Other">مشروع آخر</option></select></label>
+            <label>موعد الإطلاق <small>(اختياري)</small><select name="target_launch"><option value="">—</option><option value="Within a month">خلال شهر</option><option value="1–3 months">خلال شهر إلى ثلاثة أشهر</option><option value="3+ months">بعد أكثر من ثلاثة أشهر</option><option value="Flexible">مرن</option></select></label>
+          </div>
+          <label>شو بدك نبني لمشروعك؟
+            <textarea name="message" rows="6" required minlength="20" maxlength="5000" aria-describedby="brief-help"></textarea>
+          </label>
+          <p class="request-hint" id="brief-help">احكيلي عن الهدف والجمهور والصفحات أو الميزات الأساسية.</p>
+          <p class="request-hint request-privacy">بستخدم المعلومات اللي بتشاركها حتى أرد عليك بخصوص هالمشروع.</p>
+          <button class="button button-primary" type="submit" disabled>أرسل طلب المشروع</button>
+          <p class="request-status" id="request-status" role="status" aria-atomic="true"></p>
+          <noscript><p class="request-hint">الإرسال من الصفحة بده JavaScript. بتقدر تراسل Forma بالبريد مباشرة.</p></noscript>
+        </form>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
