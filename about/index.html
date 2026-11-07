@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Forma Studio is the home for my design and web development work.">
+  <title>About Forma Studio</title>
+  <link rel="canonical" href="https://nezar2004.github.io/forma-studio/about/">
+  <link rel="alternate" hreflang="en" href="https://nezar2004.github.io/forma-studio/about/">
+  <link rel="alternate" hreflang="ar" href="https://nezar2004.github.io/forma-studio/ar/about/">
+  <link rel="alternate" hreflang="x-default" href="https://nezar2004.github.io/forma-studio/about/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About Forma Studio">
+  <meta property="og:description" content="Forma Studio is the home for my design and web development work.">
+  <meta property="og:url" content="https://nezar2004.github.io/forma-studio/about/">
+  <meta property="og:image" content="https://nezar2004.github.io/forma-studio/images/forma-social.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="../images/forma-icon.svg">
+  <script>
+    let theme;
+    try { theme = localStorage.getItem("forma-theme"); } catch {}
+    document.documentElement.dataset.theme = theme === "dark" || theme === "light"
+      ? theme : matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  </script>
+  <link rel="stylesheet" href="../styles.css?v=portfolio-8">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="header">
+    <div class="container header-inner case-header">
+      <a class="brand" href="../" aria-label="Forma Studio home"><img class="brand-light" src="../images/forma-wordmark.svg" alt="" width="145" height="38"><img class="brand-dark" src="../images/forma-wordmark-dark.svg" alt="" width="145" height="38"></a>
+      <a class="icon-button language-link" href="../ar/about/" lang="ar" aria-label="العربية">AR</a>
+    </div>
+  </header>
+  <main class="container case-page studio-page" id="main" tabindex="-1">
+    <div class="studio-intro">
+      <p class="eyebrow">Independent design &amp; development</p>
+      <h1>About Forma Studio</h1>
+      <p class="studio-lead">Forma Studio is the home for my design and web development work.</p>
+      <p>I’m Nezar Ahmad. I started Forma to bring the design decisions and the development work behind my projects into one place.</p>
+    </div>
+    <section class="section" aria-labelledby="approach">
+      <h2 id="approach">How I approach a project</h2>
+      <div class="card-grid studio-values">
+        <article class="service-card"><span class="eyebrow" aria-hidden="true">01</span><h3>Start with the user’s task</h3><p>I work out what someone needs to do on the site, then give that action a clear place in the layout.</p></article>
+        <article class="service-card"><span class="eyebrow" aria-hidden="true">02</span><h3>Review the design together</h3><p>I share the key screens and explain the decisions so you can give feedback before development.</p></article>
+        <article class="service-card"><span class="eyebrow" aria-hidden="true">03</span><h3>Build for handover</h3><p>I check the agreed pages on desktop and mobile and provide the files and access we’ve agreed on.</p></article>
+      </div>
+    </section>
+    <div class="hero-actions studio-actions">
+      <a class="button button-primary" href="../#contact">Discuss a project</a>
+      <a class="text-link" href="../#process">See how I work</a>
+    </div>
+  </main>
+</body>
+</html>
