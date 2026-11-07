@@ -218,3 +218,28 @@ button, select { cursor: pointer; }
 @media (max-width: 760px) {
   [dir="rtl"] .hero h1.hero-title-descriptive { font-size: clamp(2.3rem, 7.7vw, 4.4rem); }
 }
+
+/* Project inquiries */
+.request-page { padding-block: clamp(1rem, 3vw, 2rem) clamp(3rem, 7vw, 7rem); }
+.request-layout { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); align-items: start; gap: clamp(1.5rem, 6vw, 6rem); margin-top: clamp(1.5rem, 5vw, 4.5rem); }
+.request-intro h1 { max-width: 13ch; font-size: clamp(2.8rem, 6vw, 6rem); text-wrap: balance; }
+.request-lead { max-width: 40ch; margin-block: 1rem 2rem; color: var(--muted); }
+.request-next { padding-top: 1.25rem; border-top: 1px solid var(--line); }
+.request-next h2, .request-card h2 { font-size: clamp(1.35rem, 3vw, 2rem); }
+.request-next ol { padding-inline-start: 1.3rem; color: var(--muted); }
+.request-next li + li { margin-top: .35rem; }
+.request-next > p { color: var(--muted); }
+.request-card { padding: clamp(1rem, 3vw, 2rem); border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.request-card form { margin-top: 1.2rem; }
+.request-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .95rem; margin-bottom: .95rem; }
+.request-card label { display: block; min-width: 0; font-weight: 700; font-size: .9rem; }
+.request-card label small { font-weight: 400; color: var(--muted); }
+.request-card :is(input:not([type="hidden"]), select, textarea) { display: block; width: 100%; min-width: 0; min-height: 46px; margin-top: .35rem; padding: .65rem; border: 1px solid var(--line); border-radius: .45rem; background: var(--bg); }
+.request-card textarea { resize: vertical; }
+.request-hint { color: var(--muted); font-size: .86rem; margin-top: .45rem; }
+.request-privacy { margin-block: .85rem; }
+.request-status:not(:empty) { margin-top: .85rem; font-size: .9rem; font-weight: 650; }
+.request-status[data-state="error"] { color: var(--error); }
+.request-status[data-state="success"] { color: var(--accent); }
+@media (max-width: 760px) { .request-layout { grid-template-columns: 1fr; } }
+@media (max-width: 460px) { .request-fields { grid-template-columns: 1fr; } }
