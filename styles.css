@@ -196,3 +196,12 @@ button, select { cursor: pointer; }
 @media (max-width: 760px) {
   .hero h1.hero-title-descriptive { font-size: clamp(2.65rem, 8.5vw, 4.4rem); }
 }
+
+/* Process and small-screen navigation */
+.process-section { background: var(--soft); }
+.process-steps { margin: 0; padding: 0; list-style: none; }
+.case-intro h1 { overflow-wrap: anywhere; }
+.skip-link { left: auto; inset-inline-start: .75rem; }
+@media (max-width: 900px) and (min-width: 761px) {
+  .header-inner, .nav { gap: .75rem; }
+}

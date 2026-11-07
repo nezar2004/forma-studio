@@ -5,11 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
   <meta name="description"
-        content="Forma Studio builds brands, websites, and digital products. Explore work across healthcare, daily planning, and fashion.">
-  <title>Forma Studio — Digital design & development</title>
+        content="Nezar Ahmad’s portfolio for web design, product interfaces, and interactive catalogs. Explore projects and see how to start yours.">
+  <title>Forma Studio | Web Design &amp; Development</title>
+  <link rel="canonical" href="https://nezar2004.github.io/forma-studio/">
+  <link rel="alternate" hreflang="en" href="https://nezar2004.github.io/forma-studio/">
+  <link rel="alternate" hreflang="ar" href="https://nezar2004.github.io/forma-studio/ar/">
+  <link rel="alternate" hreflang="x-default" href="https://nezar2004.github.io/forma-studio/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Forma Studio — Digital design & development">
-  <meta property="og:description" content="Explore Nezar Ahmad’s web design and development projects across healthcare, daily planning, and fashion.">
+  <meta property="og:title" content="Forma Studio | Web Design &amp; Development">
+  <meta property="og:description" content="Nezar Ahmad’s portfolio for web design, product interfaces, and interactive catalogs. Explore projects and see how to start yours.">
   <meta property="og:url" content="https://nezar2004.github.io/forma-studio/">
   <meta property="og:image" content="https://nezar2004.github.io/forma-studio/images/forma-social.jpg">
   <meta property="og:image:width" content="1200">
@@ -17,9 +21,14 @@
   <meta property="og:image:alt" content="Forma Studio, digital design and development">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="stylesheet" href="styles.css?v=portfolio-6">
-  <!-- Runs before body rendering to restore the theme without flashing. -->
-  <script src="script.js?v=portfolio-4"></script>
+  <script>
+    let theme;
+    try { theme = localStorage.getItem("forma-theme"); } catch {}
+    document.documentElement.dataset.theme = theme === "dark" || theme === "light"
+      ? theme : matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  </script>
+  <link rel="stylesheet" href="styles.css?v=portfolio-7">
+  <script src="script.js?v=portfolio-4" defer></script>
 </head>
 
 <body>
@@ -58,6 +67,7 @@
         <a href="#work">Work</a>
         <a href="#services">Services</a>
         <a href="#about">The studio</a>
+        <a href="#process">Process</a>
         <a href="#contact">Discuss a project <span aria-hidden="true">↗</span></a>
       </nav>
 
@@ -76,7 +86,7 @@
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" tabindex="-1">
     <!-- Hero: semantic content stays independent of the decorative artwork. -->
     <section class="hero container" id="home" aria-labelledby="hero-title">
       <div class="hero-copy">
@@ -122,7 +132,7 @@
       <div class="work-grid">
           <article class="work-card">
             <div class="work-cover">
-              <img src="images/amal.jpg" alt="Screenshot of Amal’s healthcare landing page" loading="lazy" decoding="async" width="880" height="605">
+              <img src="images/amal-card.jpg" alt="Screenshot of Amal’s healthcare landing page" loading="lazy" decoding="async" width="640" height="440">
             </div>
             <p class="eyebrow">Digital health</p>
             <h3>Amal <span lang="ar" dir="rtl">أمل</span></h3>
@@ -138,7 +148,7 @@
 
           <article class="work-card">
             <div class="work-cover">
-              <img src="images/wazen.jpg" alt="Screenshot of the Wazen homepage" loading="lazy" decoding="async" width="880" height="605">
+              <img src="images/wazen-card.jpg" alt="Screenshot of the Wazen homepage" loading="lazy" decoding="async" width="640" height="440">
             </div>
             <p class="eyebrow">Daily planning</p>
             <h3>Wazen <span lang="ar" dir="rtl">وازن</span></h3>
@@ -154,7 +164,7 @@
 
           <article class="work-card">
             <div class="work-cover">
-              <img src="images/neravyn.jpg" alt="Screenshot of the NERAVYN fashion homepage" loading="lazy" decoding="async" width="880" height="605">
+              <img src="images/neravyn-card.jpg" alt="Screenshot of the NERAVYN fashion homepage" loading="lazy" decoding="async" width="640" height="440">
             </div>
             <p class="eyebrow">Fashion showcase</p>
             <h3>NERAVYN</h3>
@@ -170,64 +180,30 @@
       </div>
     </section>
 
-    <!-- Three equally weighted service cards. -->
     <section class="section services" id="services" aria-labelledby="services-title">
       <div class="container">
         <div class="section-heading">
-          <div>
-            <p class="eyebrow">02 / What we do</p>
-            <h2 id="services-title">Design and development services</h2>
-          </div>
-          <p>Work with Forma on a new website, a digital product interface, or an interactive catalog.</p>
+          <div><p class="eyebrow">02 / Services</p><h2 id="services-title">What Forma can build for you</h2></div>
+          <p>We agree on the pages, features, and deliverables before work begins.</p>
         </div>
-
         <div class="card-grid">
           <article class="service-card">
-            <div class="card-top">
-              <svg class="icon service-icon" aria-hidden="true"><use href="#spark"/></svg>
-              <span>01</span>
-            </div>
-            <h3>Brand identity</h3>
-            <p>A clear point of view and a distinctive identity that feels
-               unmistakably you.</p>
-            <ul class="tags" aria-label="Brand services">
-              <li>Strategy</li><li>Identity</li><li>Art direction</li>
-            </ul>
-            <a class="card-link" href="#contact">Let’s shape your brand
-              <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>
-            </a>
+            <div class="card-top"><svg class="icon service-icon" aria-hidden="true"><use href="#spark"/></svg><span>01</span></div>
+            <h3>Website design and development</h3>
+            <p>A responsive public website with a clear page structure. Handover can include the published site and source files.</p>
+            <a class="card-link" href="work/amal/">See Amal’s public website<svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a>
           </article>
-
           <article class="service-card">
-            <div class="card-top">
-              <svg class="icon service-icon" aria-hidden="true"><use href="#layers"/></svg>
-              <span>02</span>
-            </div>
-            <h3>Product design</h3>
-            <p>Intuitive digital experiences that make complex things feel
-               refreshingly simple.</p>
-            <ul class="tags" aria-label="Design services">
-              <li>UX research</li><li>UI design</li><li>Prototyping</li>
-            </ul>
-            <a class="card-link" href="#contact">Let’s design your experience
-              <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>
-            </a>
+            <div class="card-top"><svg class="icon service-icon" aria-hidden="true"><use href="#layers"/></svg><span>02</span></div>
+            <h3>Product interface design</h3>
+            <p>User flows, screen designs, and an interactive prototype when in scope.</p>
+            <a class="card-link" href="work/wazen/">See the Wazen dashboard<svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a>
           </article>
-
           <article class="service-card">
-            <div class="card-top">
-              <svg class="icon service-icon" aria-hidden="true"><use href="#code"/></svg>
-              <span>03</span>
-            </div>
-            <h3>Web development</h3>
-            <p>Fast, accessible websites with thoughtful interactions and
-               a foundation ready to grow.</p>
-            <ul class="tags" aria-label="Development services">
-              <li>Development</li><li>Accessibility</li><li>Performance</li>
-            </ul>
-            <a class="card-link" href="#contact">Let’s build your website
-              <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>
-            </a>
+            <div class="card-top"><svg class="icon service-icon" aria-hidden="true"><use href="#code"/></svg><span>03</span></div>
+            <h3>Interactive catalogs</h3>
+            <p>Product views, category filters, and an interactive browsing or demo shopping flow.</p>
+            <a class="card-link" href="work/neravyn/">See the NERAVYN catalog<svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a>
           </article>
         </div>
       </div>
@@ -262,10 +238,24 @@
       </div>
     </section>
 
+    <section class="section process-section" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">04 / Process</p><h2 id="process-title">How we work</h2></div>
+          <p>A typical project moves through these three stages. We agree on the details together before starting.</p>
+        </div>
+        <ol class="card-grid process-steps" role="list">
+          <li class="service-card"><span class="eyebrow" aria-hidden="true">01</span><h3>Define the scope</h3><p>We discuss the audience, goals, required pages or features, and target date. You get a written scope and an estimate before work starts.</p></li>
+          <li class="service-card"><span class="eyebrow" aria-hidden="true">02</span><h3>Review the design</h3><p>I share the key screens or a prototype for feedback. We agree on the direction before development.</p></li>
+          <li class="service-card"><span class="eyebrow" aria-hidden="true">03</span><h3>Build and hand over</h3><p>I build and test the agreed screens on desktop and mobile. You receive the agreed files, access, and a short guide if included.</p></li>
+        </ol>
+      </div>
+    </section>
+
     <section class="section contact-section" id="contact" aria-labelledby="contact-title">
       <div class="container contact-grid">
         <div>
-          <p class="eyebrow">04 / Your next chapter</p>
+          <p class="eyebrow">05 / Contact</p>
           <h2 id="contact-title">Let’s discuss<br><em>your project.</em></h2>
           <p>Tell me what you’re building, who it’s for, and when you’d like to launch.</p>
           <div class="contact-note">
@@ -276,9 +266,7 @@
 
         <div class="contact-options">
           <h3>Get in touch</h3>
-          <a class="button button-primary" href="mailto:nezarmoon2004@gmail.com?subject=Project%20inquiry%20%E2%80%94%20Forma%20Studio&amp;body=Hi%20Nezar%2C%0D%0A%0D%0AI%E2%80%99d%20like%20to%20discuss%20a%20project%20with%20Forma%20Studio.%0D%0A%0D%0AProject%20goals%3A%0D%0AScope%3A%0D%0ATarget%20launch%20date%3A%0D%0A%0D%0AThanks%2C">Email Forma Studio
-            <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>
-          </a>
+          <a class="button button-primary" href="mailto:nezarmoon2004@gmail.com?subject=Project%20inquiry%20%E2%80%94%20Forma%20Studio&amp;body=Hi%20Nezar%2C%0D%0A%0D%0AI%E2%80%99d%20like%20to%20discuss%20a%20project%20with%20Forma%20Studio.%0D%0A%0D%0AProject%20type%20and%20goal%3A%0D%0AWho%20it%E2%80%99s%20for%3A%0D%0AMust-have%20pages%20or%20features%3A%0D%0ATarget%20launch%20date%3A%0D%0AReference%20links%20(optional)%3A%0D%0A%0D%0AThanks%2C">Email Forma Studio<svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a>
           <p class="contact-address"><bdi>nezarmoon2004@gmail.com</bdi></p>
           <a class="text-link" href="https://wa.me/962785308994?text=Hi%20Forma%20Studio%2C%20I%E2%80%99d%20like%20to%20talk%20about%20a%20project.%0A%0AProject%20type%3A%0AWhat%20I%20need%3A%0AIdeal%20launch%20date%3A">Message on WhatsApp</a>
         </div>
@@ -295,6 +283,7 @@
       <a href="#services">Services</a>
       <a href="#work">Work</a>
       <a href="#about">Studio</a>
+      <a href="#process">Process</a>
       <a href="#contact">Contact</a>
     </nav>
     <p class="copyright">© <span id="year">2026</span> Forma. All rights reserved.</p>
