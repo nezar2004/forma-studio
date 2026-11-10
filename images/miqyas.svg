@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" width="640" height="440">
+  <rect width="640" height="440" fill="#dcebe5"/>
+  <rect x="34" y="38" width="572" height="364" rx="22" fill="#f9fcfa" stroke="#b5d1c6"/>
+  <path d="M462 38h122q22 0 22 22v320q0 22-22 22H462z" fill="#143830"/>
+  <g font-family="Tahoma, sans-serif" direction="rtl" text-anchor="start">
+    <text x="580" y="94" fill="#ffffff" font-size="28" font-weight="bold">مقياس</text>
+    <text x="580" y="121" fill="#a9dbca" font-size="12">منصة التقييم الرقمي</text>
+    <text x="430" y="117" fill="#143830" font-size="26" font-weight="bold">لوحة الامتحانات</text>
+  </g>
+  <rect x="484" y="152" width="99" height="31" rx="7" fill="#286456"/>
+  <path d="M492 213h80m-80 35h80m-80 35h62" stroke="#6ca091" stroke-width="5" stroke-linecap="round"/>
+  <rect x="65" y="147" width="169" height="73" rx="11" fill="#e3f1eb"/>
+  <rect x="250" y="147" width="180" height="73" rx="11" fill="#e3f1eb"/>
+  <path d="M83 194h46m139 0h55" stroke="#69a891" stroke-width="5" stroke-linecap="round"/>
+  <rect x="65" y="243" width="365" height="122" rx="12" fill="#f0f6f3" stroke="#d3e4dc"/>
+  <path d="M86 276h326m-326 27h326m-326 27h326" stroke="#c0dacf" stroke-width="3"/>
+  <circle cx="389" cy="184" r="16" fill="#248770"/>
+  <path d="m382 184 5 5 9-10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
