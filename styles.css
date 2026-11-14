@@ -226,3 +226,10 @@ button, select { cursor: pointer; }
 @media (min-width: 1100px) {
   .work-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
+
+@media (max-width: 600px) {
+  .work-grid, .case-page:not(:has(a[href*="A_project_for_the_Ministry_of_Health"])) .case-intro, .case-page:not(:has(a[href*="A_project_for_the_Ministry_of_Health"])) .case-journeys { grid-template-columns: minmax(0, 1fr); }
+  .work-card :is(h3,p,a), .case-page:not(:has(a[href*="A_project_for_the_Ministry_of_Health"])) :is(h1,h2,p,a) { overflow-wrap: anywhere; }
+  .case-page:not(:has(a[href*="A_project_for_the_Ministry_of_Health"])) .case-intro h1 { font-size: clamp(2.3rem, 10vw, 3.8rem); line-height: 1.12; }
+  .case-page:not(:has(a[href*="A_project_for_the_Ministry_of_Health"])) .case-intro .text-link { display: inline-flex; min-height: 44px; align-items: center; }
+}
